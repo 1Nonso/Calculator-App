@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: league;
+  src: url(Font/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: league;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background-color: hsl(222, 26%, 31%);
+}
+
+main {
+  width: 22rem;
+}
+
+.navSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: hsl(0, 0%, 100%);
+  h1 {
+    width: 30%;
+    font-size: 2.5rem;
+  }
+  .themeSwitchDiv {
+    padding: 0.6rem 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .theme {
+      font-size: 0.7rem;
+      position: relative;
+      bottom: -0.75rem;
+    }
+  }
+  .themeSwitchCircleSection {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .themeSwitchCircleId {
+    width: 4.7rem;
+    display: flex;
+    margin-bottom: 0.2rem;
+    p {
+      display: flex;
+      justify-content: center;
+      width: 35%;
+    }
+  }
+  .orangeCircleBackground {
+    display: flex;
+    align-items: center;
+    height: 1.2rem;
+    width: 3.5rem;
+    border-radius: 2rem;
+    padding: 0.1rem 0.3rem;
+    background-color: hsl(223, 31%, 20%);
+    .orangeCircle {
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      background-color: hsl(6, 63%, 50%);
+    }
+  }
+}
