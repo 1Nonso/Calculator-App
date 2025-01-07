@@ -15,7 +15,7 @@ body {
   align-items: center;
   height: 100dvh;
   background-color: hsl(222, 26%, 31%);
-  padding: 5rem 0;
+  padding: 0;
 }
 
 main {
@@ -82,22 +82,15 @@ main {
   width: 100%;
   height: 6rem;
   background-color: hsl(223, 31%, 20%);
-  border-radius: 1rem;
-  margin-bottom: 2rem;
+  border-radius: 0.6rem;
+  margin: 1.5rem 0;
 }
 
 .buttonSectionContainer {
-  font-family: league;
-  font-weight: 700;
-
   width: 100%;
   background-color: hsl(223, 31%, 20%);
-  height: fit-content;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   border: none;
-  button{
-    box-shadow: 0px -4px 0px 0px hsl(28, 16%, 65%) inset;
-  }
 }
 
 .buttonSection {
@@ -107,33 +100,55 @@ main {
   grid-gap: 0.8rem;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
-.del, .res{
+.buttonBlue {
+  font-family: league;
+  box-shadow: 0px -4px 0px 0px hsl(224, 28%, 35%) inset;
   background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.buttonSubmit {
+  font-family: league;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: none;
+  box-shadow: 0px -4px 0px 0px hsl(6, 70%, 34%) inset;
+  background-color: hsl(6, 63%, 50%);
   color: hsl(0, 0%, 100%);
 }
 
 .button {
   width: 4rem;
   height: 4rem;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   border: none;
   color: hsl(221, 14%, 31%);
   background-color: hsl(30, 25%, 89%);
+  box-shadow: 0px -4px 0px 0px hsl(28, 16%, 65%) inset;
   font-size: 2rem;
+  font-family: league;
+  font-weight: 700;
 }
 
 .buttonSectionBottom {
   width: 18.5rem;
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
   button {
-    width: 9rem;
+    width: 8.8rem;
     height: 4rem;
-    border-radius: 0.5rem;
     border: none;
   }
 }
