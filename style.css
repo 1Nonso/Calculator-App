@@ -146,6 +146,10 @@ main {
   font-size: 2rem;
   font-family: league;
   font-weight: 700;
+  p{
+    position: relative;
+    bottom: -0.2rem;
+  }
 }
 
 .buttonSectionBottom {
@@ -161,7 +165,7 @@ main {
 
 @media screen and (min-width: 1024px) {
   main {
-    width: 30rem;
+    width: 35rem;
   }
 
   .display {
@@ -170,12 +174,12 @@ main {
 
   .buttonSection {
     display: grid;
-    grid-template-columns: repeat(4, 6rem);
+    grid-template-columns: repeat(4, 7rem);
     grid-template-rows: repeat(4, 4rem);
-    grid-gap: 0.8rem;
+    grid-gap: 1.3rem;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
   }
 
   .themeSwitchDiv{
@@ -183,23 +187,26 @@ main {
   }
 
   .button{
-    width: 5.5rem;
-    height: 3.5rem;
+    font-size: 2.5rem;
+    width: 6.5rem;
+    height: 4rem;
     position: relative;
     right: -0.5rem;
+    border-radius: 0.7rem;
   }
 
   .buttonBlue{
-    width: 5.5rem;
-    height: 3.5rem;
+    width: 6.5rem;
+    height: 4rem;
     margin-left: 0.5rem;
   }
 
   .buttonSectionBottom{
-    width: 26.5rem;
+    width: 32rem;
     button{
       width: 12.5rem;
       height: 4rem;
+      border-radius: 0.7rem;
     }
   }
 
