@@ -15,7 +15,7 @@ body {
   align-items: center;
   height: 100dvh;
   background-color: hsl(222, 26%, 31%);
-  padding: 0;
+  padding: 5rem 0;
 }
 
 main {
