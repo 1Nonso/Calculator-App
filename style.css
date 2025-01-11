@@ -249,12 +249,47 @@ input[type="range"]::-webkit-slider-thumb {
 .theme-2 {
   background-color: hsl(0, 0%, 90%);
 
-  .navSection{
+  .navSection {
     color: hsl(60, 10%, 19%);
   }
 
-  .orangeCircleBackground{
-    
+  .orangeCircleBackground {
+    background-color: hsl(0, 5%, 81%);
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    background: hsl(25, 98%, 40%);
+  }
+
+  .display {
+    background-color: hsl(0, 0%, 93%);
+  }
+
+  .buttonSectionContainer {
+    background-color: hsl(0, 3%, 87%);
+  }
+
+  .buttonBlue {
+    box-shadow: 0px -4px 0px 0px hsl(185, 58%, 25%) inset;
+    background-color: hsl(185, 42%, 37%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  .buttonSubmit {
+    box-shadow: 0px -4px 0px 0px hsl(25, 99%, 27%) inset;
+    background-color: hsl(25, 98%, 40%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  .buttonSubmit:hover {
+    cursor: pointer;
+    background-color: hsl(25, 98%, 40%, 0.7);
+  }
+
+  .button {
+    color: hsl(60, 10%, 19%);
+    background-color: hsl(45, 7%, 89%);
+    box-shadow: 0px -4px 0px 0px hsl(35, 11%, 61%) inset;
   }
 }
 
