@@ -256,17 +256,17 @@ input[type="range"]::-webkit-slider-thumb {
   .orangeCircleBackground {
     background-color: hsl(0, 5%, 81%);
   }
-
+  
   input[type="range"]::-webkit-slider-thumb {
     background: hsl(25, 98%, 40%);
   }
-
+  
   .display {
     background-color: hsl(0, 0%, 93%);
   }
-
+  
   .buttonSectionContainer {
-    background-color: hsl(0, 3%, 87%);
+    background-color: hsl(0, 5%, 81%);x
   }
 
   .buttonBlue {
