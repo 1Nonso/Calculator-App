@@ -14,156 +14,221 @@ body {
   justify-content: center;
   align-items: center;
   height: 100dvh;
-  background-color: hsl(222, 26%, 31%);
   padding: 0;
 }
-.theme-2 {
-  main {
-    width: 22rem;
+
+main {
+  width: 22rem;
+}
+
+.navSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  h1 {
+    width: 30%;
+    font-size: 2.5rem;
   }
+}
+
+.themeSwitchDiv {
+  padding: 0.6rem 0;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme {
+  font-size: 0.7rem;
+  position: relative;
+  bottom: -0.65rem;
+  right: -2.5rem;
+}
+
+.themeSwitchCircleSection {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+
+.themeSwitchCircleId {
+  width: 5.5rem;
+  display: flex;
+  margin-bottom: 0.2rem;
+  p {
+    display: flex;
+    justify-content: right;
+    width: 35%;
+  }
+}
+
+.orangeCircleBackground {
+  display: flex;
+  align-items: center;
+  height: 1.2rem;
+  width: 4.3rem;
+  border-radius: 2rem;
+  padding: 0.1rem 0.3rem;
+  position: relative;
+  left: 0.5rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 4rem;
+  height: 5px;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  position: relative;
+  left: 0.2rem;
+  bottom: 0.03rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.display {
+  width: 100%;
+  height: 6rem;
+  border-radius: 0.6rem;
+  margin: 1.5rem 0;
+}
+
+.buttonSectionContainer {
+  width: 100%;
+  border-radius: 0.6rem;
+  border: none;
+}
+
+.buttonSection {
+  display: grid;
+  grid-template-columns: repeat(4, 4rem);
+  grid-template-rows: repeat(4, 4rem);
+  grid-gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.buttonBlue {
+  font-family: league;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.buttonBlue:hover {
+  cursor: pointer;
+  background-color: hsl(225, 21%, 49%, 0.7);
+}
+
+.buttonBlue:active {
+  position: relative;
+  top: 0.1rem;
+}
+
+.buttonSubmit {
+  font-family: league;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: none;
+}
+
+.buttonSubmit:active {
+  position: relative;
+  top: 0.1rem;
+}
+
+.button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: none;
+  font-size: 2rem;
+  font-family: league;
+  font-weight: 700;
+  p {
+    position: relative;
+    bottom: -0.2rem;
+  }
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: hsl(30, 25%, 89%, 0.7);
+}
+
+.button:active {
+  position: relative;
+  top: 0.1rem;
+}
+
+.buttonSectionBottom {
+  width: 18.5rem;
+  display: flex;
+  justify-content: space-between;
+  button {
+    width: 8.8rem;
+    height: 4rem;
+    border: none;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+.theme-1 {
+  background-color: hsl(222, 26%, 31%);
 
   .navSection {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
     color: hsl(0, 0%, 100%);
-    h1 {
-      width: 30%;
-      font-size: 2.5rem;
-    }
-  }
-
-  .themeSwitchDiv {
-    padding: 0.6rem 0;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .theme {
-    font-size: 0.7rem;
-    position: relative;
-    bottom: -0.65rem;
-    right: -2.5rem;
-  }
-
-  .themeSwitchCircleSection {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: center;
-  }
-
-  .themeSwitchCircleId {
-    width: 5.5rem;
-    display: flex;
-    margin-bottom: 0.2rem;
-    p {
-      display: flex;
-      justify-content: right;
-      width: 35%;
-    }
   }
 
   .orangeCircleBackground {
-    display: flex;
-    align-items: center;
-    height: 1.2rem;
-    width: 4.3rem;
-    border-radius: 2rem;
-    padding: 0.1rem 0.3rem;
     background-color: hsl(223, 31%, 20%);
-    position: relative;
-    left: 0.5rem;
   }
 
   input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 4rem;
-    height: 5px;
     background: hsl(222, 26%, 31%);
-    border-radius: 5px;
-    outline: none;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-    position: relative;
-    left: 0.1rem;
-    bottom: 0.03rem;
-  }
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 13px;
-    height: 13px;
-    background: hsl(6, 63%, 50%);
-    border-radius: 50%;
-    cursor: pointer;
   }
 
-  .orangeCircle:hover {
-    cursor: pointer;
-    background-color: hsl(6, 63%, 50%, 0.7);
+  input[type="range"]::-webkit-slider-thumb {
+    background: hsl(6, 63%, 50%);
   }
 
   .display {
-    width: 100%;
-    height: 6rem;
     background-color: hsl(223, 30%, 16%);
-    border-radius: 0.6rem;
-    margin: 1.5rem 0;
   }
 
   .buttonSectionContainer {
-    width: 100%;
     background-color: hsl(223, 31%, 20%);
-    border-radius: 0.6rem;
-    border: none;
-  }
-
-  .buttonSection {
-    display: grid;
-    grid-template-columns: repeat(4, 4rem);
-    grid-template-rows: repeat(4, 4rem);
-    grid-gap: 0.8rem;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem 0;
   }
 
   .buttonBlue {
-    font-family: league;
     box-shadow: 0px -4px 0px 0px hsl(224, 28%, 35%) inset;
     background-color: hsl(225, 21%, 49%);
     color: hsl(0, 0%, 100%);
-    width: 4rem;
-    height: 4rem;
-    border-radius: 0.4rem;
-    border: none;
-    font-size: 1.3rem;
-    font-weight: 700;
-  }
-
-  .buttonBlue:hover {
-    cursor: pointer;
-    background-color: hsl(225, 21%, 49%, 0.7);
-  }
-
-  .buttonBlue:active {
-    position: relative;
-    top: 0.1rem;
   }
 
   .buttonSubmit {
-    font-family: league;
-    font-size: 1.5rem;
-    font-weight: 700;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 0.4rem;
-    border: none;
     box-shadow: 0px -4px 0px 0px hsl(6, 70%, 34%) inset;
     background-color: hsl(6, 63%, 50%);
     color: hsl(0, 0%, 100%);
@@ -174,102 +239,73 @@ body {
     background-color: hsl(6, 63%, 50%, 0.7);
   }
 
-  .buttonSubmit:active {
-    position: relative;
-    top: 0.1rem;
-  }
-
   .button {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 0.4rem;
-    border: none;
     color: hsl(221, 14%, 31%);
     background-color: hsl(30, 25%, 89%);
     box-shadow: 0px -4px 0px 0px hsl(28, 16%, 65%) inset;
-    font-size: 2rem;
-    font-family: league;
-    font-weight: 700;
-    p {
-      position: relative;
-      bottom: -0.2rem;
-    }
+  }
+}
+
+.theme-2 {
+  background-color: hsl(0, 0%, 90%);
+
+  .navSection{
+    color: hsl(60, 10%, 19%);
   }
 
-  .button:hover {
-    cursor: pointer;
-    background-color: hsl(30, 25%, 89%, 0.7);
+  .orangeCircleBackground{
+    
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 3rem 0;
   }
 
-  .button:active {
+  main {
+    width: 35rem;
+  }
+
+  .display {
+    height: 8rem;
+  }
+
+  .buttonSection {
+    display: grid;
+    grid-template-columns: repeat(4, 7rem);
+    grid-template-rows: repeat(4, 4rem);
+    grid-gap: 1.3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .themeSwitchDiv {
+    width: 35%;
+  }
+
+  .button {
+    font-size: 2.5rem;
+    width: 6.5rem;
+    height: 4rem;
     position: relative;
-    top: 0.1rem;
+    right: -0.5rem;
+    border-radius: 0.7rem;
+  }
+
+  .buttonBlue {
+    width: 6.5rem;
+    height: 4rem;
+    margin-left: 0.5rem;
   }
 
   .buttonSectionBottom {
-    width: 18.5rem;
-    display: flex;
-    justify-content: space-between;
+    width: 32rem;
     button {
-      width: 8.8rem;
+      width: 12.5rem;
       height: 4rem;
-      border: none;
-    }
-    button:hover {
-      cursor: pointer;
-    }
-  }
-}
-@media screen and (min-width: 1024px) {
-  body{
-    padding: 5rem 0;
-  }
-
-  .theme-2 {
-    main {
-      width: 35rem;
-    }
-
-    .display {
-      height: 8rem;
-    }
-
-    .buttonSection {
-      display: grid;
-      grid-template-columns: repeat(4, 7rem);
-      grid-template-rows: repeat(4, 4rem);
-      grid-gap: 1.3rem;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem 0;
-    }
-
-    .themeSwitchDiv {
-      width: 35%;
-    }
-
-    .button {
-      font-size: 2.5rem;
-      width: 6.5rem;
-      height: 4rem;
-      position: relative;
-      right: -0.5rem;
       border-radius: 0.7rem;
-    }
-
-    .buttonBlue {
-      width: 6.5rem;
-      height: 4rem;
-      margin-left: 0.5rem;
-    }
-
-    .buttonSectionBottom {
-      width: 32rem;
-      button {
-        width: 12.5rem;
-        height: 4rem;
-        border-radius: 0.7rem;
-      }
     }
   }
 }
