@@ -56,22 +56,18 @@ class Calculator {
   }
 
   appendNumber(number) {
-    if (this.shouldResetScreen && number !== ".") {
-      this.currentInput = "";
-      this.showResetScreen = false;
-    } else if (this.shouldResetScreen && number === ".") {
-      this.currentInput = "0";
+    if (this.shouldResetScreen) {
+      this.currentInput = number === "." ? "0." : number.toString();
       this.shouldResetScreen = false;
-    }
-
-    if (number === "." && this.currentInput.includes(".")) {
-      return;
-    }
-    // if (number === "0" && this.currentInput === "0") return;
-    if (this.currentInput === "0" && number !== ".") {
-      this.currentInput = number;
     } else {
-      this.currentInput += number;
+      if (number === "." && this.currentInput.includes(".")) {
+        return;
+      }
+      if (this.currentInput === "0" && number !== ".") {
+        this.currentInput = number;
+      } else {
+        this.currentInput += number;
+      }
     }
     this.updateDisplay();
   }
