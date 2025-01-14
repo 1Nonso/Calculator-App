@@ -1,3 +1,18 @@
+function setupThemeSwitcher() {
+  const themeSlider = document.getElementById("myRange");
+  if (!themeSlider) return;
+  console.log("hello world");
+
+  const savedTheme = localStorage.getItem("calculatorTheme") || "0";
+  document.body.className = `theme-${savedTheme}`;
+  themeSlider.value = savedTheme;
+
+  themeSlider.addEventListener("input", function () {
+    const theme = this.value;
+    document.body.className = `theme-${theme}`;
+    localStorage.setItem("calculatorTheme", theme);
+  });
+}
 class Calculator {
   constructor() {
     this.display = document.querySelector(".display");
@@ -8,23 +23,6 @@ class Calculator {
 
     this.display.textContent = "0";
     this.setupEventListeners();
-    this.setupThemeSwitcher;
-  }
-
-  setupThemeSwitcher() {
-    const themeSlider = document.getElementById("myRange");
-    if (!themeSlider) return;
-    console.log("hello world");
-
-    const savedTheme = localStorage.getItem("calculatorTheme") || "0";
-    document.body.className = `theme-${savedTheme}`;
-    themeSlider.value = savedTheme;
-
-    themeSlider.addEventListener("input", function () {
-      const theme = this.value;
-      document.body.className = `theme-${theme}`;
-      localStorage.setItem("calculatorTheme", theme);
-    });
   }
 
   setupEventListeners() {
@@ -155,4 +153,5 @@ class Calculator {
 
 document.addEventListener("DOMContentLoaded", () => {
   new Calculator();
+  setupThemeSwitcher();
 });
