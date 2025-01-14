@@ -27,14 +27,6 @@ class Calculator {
     });
   }
 
-  getButtonValue(button) {
-    const pTag = button.querySelector("P");
-    if (pTag) {
-      return pTag.textContent.trim();
-    }
-    return button.textContent.trim();
-  }
-
   setupEventListeners() {
     document.querySelectorAll(".button").forEach((button) => {
       button.addEventListener("click", () => {
@@ -47,9 +39,12 @@ class Calculator {
       });
     });
 
-    document.querySelector(".buttonSubmit").addEventListener("click", () => {
-      this.calculate();
-    });
+    const submitButton = document.querySelector(".buttonSubmit");
+    if (submitButton) {
+      submitButton.addEventListener("click", () => {
+        this.calculate();
+      });
+    }
 
     document.querySelectorAll(".buttonBlue").forEach((button) => {
       button.addEventListener("click", () => {
@@ -63,13 +58,18 @@ class Calculator {
   }
 
   appendNumber(number) {
-    if (this.shouldResetScreen) {
+    if (this.shouldResetScreen && number !== ".") {
       this.currentInput = "";
       this.showResetScreen = false;
+    } else if (this.shouldResetScreen && number === ".") {
+      this.currentInput = "0";
+      this.shouldResetScreen = false;
     }
 
-    if (number === "." && this.currentInput.includes(".")) return;
-    if (number === "0" && this.currentInput === "0") return;
+    if (number === "." && this.currentInput.includes(".")) {
+      return;
+    }
+    // if (number === "0" && this.currentInput === "0") return;
     if (this.currentInput === "0" && number !== ".") {
       this.currentInput = number;
     } else {
@@ -80,12 +80,15 @@ class Calculator {
 
   setOperation(operator) {
     if (this.currentInput === "") return;
+
     if (this.previousInput !== "") {
       this.calculate();
     }
+
     this.operation = operator;
     this.previousInput = this.currentInput;
     this.currentInput = "";
+    this.shouldResetScreen = false;
   }
 
   calculate() {
@@ -97,7 +100,6 @@ class Calculator {
       return;
 
     let computation;
-
     const prev = parseFloat(this.previousInput);
     const current = parseFloat(this.currentInput);
 
@@ -122,7 +124,7 @@ class Calculator {
         return;
     }
 
-    this.currentInput = Math.round(computation * 1000000) / 1000000;
+    this.currentInput = computation.toString();
     this.operation = undefined;
     this.previousInput = "";
     this.shouldResetScreen = true;
@@ -142,6 +144,7 @@ class Calculator {
     this.currentInput = "0";
     this.previousInput = "";
     this.operation = undefined;
+    this.shouldResetScreen = false;
     this.updateDisplay();
   }
 
