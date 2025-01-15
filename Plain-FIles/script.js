@@ -109,7 +109,7 @@ class Calculator {
         break;
       case "/":
         if (current === 0) {
-          alert("Cannot Divide by Zero");
+          // alert("Cannot Divide by Zero");
           return;
         }
         computation = prev / current;
