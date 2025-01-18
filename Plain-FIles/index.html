@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="Images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App</title>
+  </head>
+  <body class="theme-0">
+    <main>
+      <section class="navSection">
+        <h1>calc</h1>
+        <div class="themeSwitchDiv">
+          <p class="theme">THEME</p>
+          <div class="themeSwitchCircleSection">
+            <div class="themeSwitchCircleId">
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+            </div>
+            <div class="orangeCircleBackground">
+              <input
+                type="range"
+                min="0"
+                max="2"
+                value="0"
+                step="1"
+                class="slider"
+                id="myRange"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="display"></section>
+      <section class="buttonSectionContainer">
+        <div class="buttonSection">
+          <button class="button">7</button>
+          <button class="button">8</button>
+          <button class="button">9</button>
+          <button class="buttonBlue">DEL</button>
+          <button class="button">4</button>
+          <button class="button">5</button>
+          <button class="button">6</button>
+          <button class="button">+</button>
+          <button class="button">1</button>
+          <button class="button">2</button>
+          <button class="button">3</button>
+          <button class="button">-</button>
+          <button class="button">.</button>
+          <button class="button">0</button>
+          <button class="button">/</button>
+          <button class="button">x</button>
+          <div class="buttonSectionBottom">
+            <button class="buttonBlue">RESET</button>
+            <button class="buttonSubmit">=</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
