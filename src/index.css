@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 body {
-  width: ;
-  margin: ;
+  background-color: hsl(222, 26%, 31%);
+}
+
+.mainApp {
+  background-color: red;
 }
